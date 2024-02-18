@@ -4,14 +4,32 @@
     padding: 0px;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: "Raleway", sans-serif;
+
+}
+
+p, .card-heading {
+    font-family: "Inter", sans-serif;
+    /* background: #f7f8f8; */
+    justify-content: space-between;
+
+/* background:#f78c9c */
 }
 
 .border-cm{
 
-    border: solid red 3px;
+    border: solid #1dd100 3px;
 }
 
 .max-width{
 
-    max-width: 1200px;
+    max-width: 1273px;
+    
+}
+.section-width{
+    width: 85%;
+    margin: auto ;
+    margin-bottom: 110px;
+
+
 }
