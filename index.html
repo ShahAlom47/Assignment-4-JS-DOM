@@ -373,9 +373,14 @@
                                     <div id="coupon-box" class=" bg-white rounded-xl  flex justify-between ">
                                     <input type="text" name="" class="w-6/12 pl-3" id="coupon-input" placeholder="Have any copupon?">
                                    
+                                    <button id="apply-btn" class="btn btn-primary bg-[#1dd100] border-none text-black text-lg font-bold" onclick="couponChack() "  disabled >Apply</button>
+                                    
+                                    </div>
+                                    <div id="error-box" class="text-red-600 text-sm"></div>
 
-                                    <a href="#" id="apply-btn" class="btn btn-primary bg-[#1dd100] border-none text-black text-lg font-bold">Apply</a>
-
+                                    <div id="discount-price" class="text-md flex justify-between my-3 ">
+                                        <p>Discounted Price:</p>
+                                        <p >BDT <span id="discountPrice">0</span></p>
 
                                     </div>
 
@@ -398,7 +403,7 @@
                                             <div class="label">
                                               <span class="label-text text-xl font-semibold">Mobile Number*</span>
                                             </div>
-                                            <input type="text" placeholder="Ente Your Mobile Number" class="input input-bordered w-full max-w-xs" />
+                                            <input id="mobileNum"  oninput="mobileNumber()" type="text" placeholder="Ente Your Mobile Number" class="input input-bordered w-full max-w-xs" />
 
                                             <label class="form-control w-full max-w-xs">
                                                 <div class="label">
@@ -406,7 +411,7 @@
                                                 </div>
                                                 <input type="text" placeholder="Ente Your Email" class="input input-bordered w-full max-w-xs" />
 
-                                                <a href="#" id="form-btn" class="btn btn-primary bg-[#1dd100] border-none text-black text-lg font-bold w-full my-7">Next</a>
+                                                <a href="index.html" id="form-btn" class="btn btn-primary bg-[#1dd100] border-none text-black text-lg font-bold w-full my-7"  >Next</a>
 
                                                 <div class="flex justify-between text-sm underline">
                                                     <a href="">Terms and Conditions</a>
