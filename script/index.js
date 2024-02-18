@@ -111,4 +111,17 @@ function mobileNumber(){
 
 }
 
+let page2= getEleentByIdName('page2');
+page2.classList.add('hidden')
+function success(){
+
+   let page1= getEleentByIdName('page1');
+
+   let page2= getEleentByIdName('page2');
+
+  page2.classList.remove('hidden')
+  page1.classList.add('hidden')
+
+
+}
 
