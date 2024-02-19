@@ -165,7 +165,6 @@ function couponChack() {
 
   }
 
-
   else {
     discountBox.classList.add('hidden')
     let error = getEleentByIdName('error-box')
@@ -177,4 +176,18 @@ function couponChack() {
 }
 
 
+function showElement(element){
+  
+  element.classList.remove('hidden');
+ 
+
+
+
+}
+
+function hideElement(element){
+ 
+ element.classList.add('hidden');
+
+}
 

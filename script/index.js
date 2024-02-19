@@ -1,8 +1,11 @@
 
 let  seatCounterArr = [];
-let seatBtn = getEleentByIdName("seat-number");
 
+// seat container 
+let seatBtn = getEleentByIdName("seat-number");
 let seatNumber = getEleentByIdName('seat-counter')
+let seatNumber2 =document.querySelectorAll('.br .btn')
+
 
  let applyBtn = document.getElementById("apply-btn"); 
 
@@ -15,9 +18,10 @@ let seatNumber = getEleentByIdName('seat-counter')
 
 let cc= 40;
 
-
-
-seatBtn.addEventListener('click', function (e) {
+// seat button listener 
+for(let btnNumb of seatNumber2){
+ 
+btnNumb.addEventListener('click', function (e) {
    
 
    let targetBtn = e.target
@@ -26,7 +30,7 @@ seatBtn.addEventListener('click', function (e) {
 
    let yy= targetBtn.classList.contains('bg-green-600');
 
-   let xx = targetBtn.classList.contains('btn');
+   let onlySeatBtn = targetBtn.classList.contains('btn');
 
    discountPrice.classList.add('hidden');
 
@@ -37,7 +41,7 @@ seatBtn.addEventListener('click', function (e) {
   
 
    
-   if (xx = true) {
+   if (onlySeatBtn = true) {
     
       
       if (yy == false && seatCounterArr.length<4 ) {
@@ -82,7 +86,7 @@ seatBtn.addEventListener('click', function (e) {
 
 });
 
-
+}
 
 
 let couponBtn =getEleentByIdName('apply-btn')
@@ -99,8 +103,9 @@ function mobileNumber(){
    let mobileNum = getEleentByIdName('mobileNum').value ;
    
    let counArr=seatCounterArr.length
+   let numberIs = /^\d+$/;
   
-   if(!isNaN(mobileNum) && counArr>=1 ){
+   if(!isNaN(mobileNum) && numberIs.test(mobileNum) && counArr>=1 ){
       nextBtn.removeAttribute('disabled');
       
    }
@@ -111,17 +116,30 @@ function mobileNumber(){
 
 }
 
+
+// next button 
+
 let page2= getEleentByIdName('page2');
-page2.classList.add('hidden')
+
 function success(){
+   let page1 = getEleentByIdName("page2");
+   let  page2= getEleentByIdName("page1");
 
-   let page1= getEleentByIdName('page1');
-
-   let page2= getEleentByIdName('page2');
-
-  page2.classList.remove('hidden')
-  page1.classList.add('hidden')
-
+   showElement(page1);
+   hideElement(page2);
 
 }
 
+
+// continue button 
+
+function continueBtn(){
+   let page1 = getEleentByIdName("page2");
+   let  page2= getEleentByIdName("page1");
+
+   showElement(page2);
+   hideElement(page1);
+
+   location.reload();
+
+} 
